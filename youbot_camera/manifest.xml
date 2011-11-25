@@ -1,0 +1,18 @@
+<package>
+  <description brief="youbot_camera">
+
+     youbot_camera
+
+  </description>
+  <author>Matthias</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/youbot_camera</url>
+  <depend package="sensor_msgs"/>
+  <depend package="camera_info_manager"/>
+  <depend package="image_transport"/>
+  <depend package="nodelet"/>
+  <depend package="dynamic_reconfigure" />
+</package>
+
+

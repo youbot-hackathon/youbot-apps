@@ -1,0 +1,23 @@
+<package>
+  <description brief="youbot_examples">
+
+     examples of python scripts and c++ code for the youbot
+
+  </description>
+  <author>Matthias Füller</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/youbot_cmd</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="actionlib"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="move_base_msgs"/>
+  <depend package="brics_actuator"/>
+  <depend package="sensor_msgs"/>
+  <depend package="tf"/>
+  <depend package="kinematics_msgs"/>
+  <depend package="control_msgs"/>
+</package>
+
