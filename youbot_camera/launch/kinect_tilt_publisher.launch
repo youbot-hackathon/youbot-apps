@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+
+	<node pkg="kinect_aux" type="kinect_aux_node" name="kinect_aux" output="screen" />
+	
+	<node pkg="youbot_camera" type="kinect_tilt_publisher" name="kinect_tilt_publisher" output="screen">
+		<remap from="cur_tilt_angle" to="/cur_tilt_angle" />
+		
+		<param name="frame_id" type="string" value="openni_link" />
+		<param name="child_frame_id" type="string" value="openni_camera" />
+		<param name="joint" type="string" value="openni_joint" />
+	</node>
+
+</launch>
