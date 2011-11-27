@@ -1,0 +1,82 @@
+<?xml>
+<robot name="base_with_cube">
+  <link name="zone1">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <box size="1 1 0.1" />
+      </geometry>
+    </visual>
+    <inertial>
+      <origin xyz="0 0 0.01" /> 
+      <mass value="1.0" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="1.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
+  </link>
+  
+  <joint name="join1" type="floating">
+    <origin xyz="0 0 0.025" rpy="0 0 0"/>
+    <parent link="zone1"/>
+    <child link="base1"/>
+  </joint>
+
+  <link name="base1">
+    <inertial>
+      <origin xyz="0 0 0.025" /> 
+      <mass value="1.0" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="1.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.025"/>
+      <geometry>
+        <box size="0.2 0.2 0.1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.025"/>
+      <geometry>
+        <box size="0.2 0.2 0.1" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="join2" type="floating">
+    <origin xyz="-0.0875 0.00 0.12" rpy="0 0 0"/>
+    <parent link="zone1"/>
+    <child link="box1"/>
+  </joint>
+
+  <link name="box1">
+    <inertial>
+      <origin xyz="0 0 0.0125" /> 
+      <mass value="1.0" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="1.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.0125"/>
+      <geometry>
+        <box size="0.025 0.025 0.025" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0125"/>
+      <geometry>
+        <box size="0.025 0.025 0.025" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="zone1">
+    <material>Gazebo/Red</material>
+    <selfCollide>true</selfCollide>	
+  </gazebo>
+  <gazebo reference="base1">
+    <material>Gazebo/Red</material>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="box1">
+    <material>Gazebo/Blue</material>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+</robot>
