@@ -32,3 +32,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 rosbuild_add_executable(kinect_tilt_publisher
     src/kinect_tilt_publisher.cpp
     )
+
+rosbuild_add_executable(kinect_simulated_tilt
+    src/kinect_simulated_tilt.cpp
+    )

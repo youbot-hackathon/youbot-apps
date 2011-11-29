@@ -49,7 +49,7 @@ int main(int argc, char** argv)
 
 	while (ros::ok()) {
 		//update joint_state
-		joint_state.header.stamp = ros::Time::now();
+		joint_state.header.stamp = ros::Time::now() - ros::Duration(0.5);
 		joint_state.name.resize(1);
 		joint_state.position.resize(1);
 		joint_state.name[0] = joint;
@@ -57,6 +57,7 @@ int main(int argc, char** argv)
 
 
 		// update transform
+		transform.header.stamp = ros::Time::now() - ros::Duration(0.5);
 		transform.transform.translation.x = 0.0;
 		transform.transform.translation.y = 0.0;
 		transform.transform.translation.z = 0.0;

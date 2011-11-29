@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- 
+	<rosparam file="$(find youbot_camera)/controller/kinect_controller.yaml" command="load" />
+	
+	<node name="kinect_controller_spawner" pkg="pr2_controller_manager" type="spawner" args="kinect_controller"/>
+ -->
+	
+	<node pkg="youbot_camera" type="kinect_simulated_tilt" name="kinect_simulated_tilt" output="screen">
+		<remap from="cur_tilt_angle" to="/cur_tilt_angle" />
+		<remap from="tilt_angle" to="/tilt_angle" />
+	</node>
+
+</launch>
