@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+
+	<node pkg="kinect_aux" type="kinect_aux_node" name="kinect_aux" output="screen" />
+
+</launch>
